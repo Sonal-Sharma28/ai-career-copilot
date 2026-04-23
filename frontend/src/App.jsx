@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import Jobs from './pages/Jobs';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
@@ -16,6 +17,11 @@ function App() {
           <Route path="/" element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/jobs" element={
+            <ProtectedRoute>
+              <Jobs />
             </ProtectedRoute>
           } />
         </Routes>
